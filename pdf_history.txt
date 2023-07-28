@@ -1,0 +1,1000 @@
+  967  cargo run --example buttom_up_folder
+  968  cp ../src/utils.rs .
+  969  cargo run --example buttom_up_folder
+  970  cargo run --example same_folder
+  971  cd ..+
+  972  cd ..
+  973  sh +x test.sh 
+  974  cargo test
+  975  cargo bench
+  976  cargo bench --plotting-backend plotters test
+  977  cargo bench
+  978  mkdir test_call_from_lib
+  979  cd test_call_from_lib/
+  980  cargo init .
+  981  tree
+  982  cargo run
+  983  cd ..
+  984  rmdir  test_call_from_lib/
+  985  rm rf  test_call_from_lib/
+  986  rm -rf  test_call_from_lib/
+  987  cargo init -lib  .
+  988  cargo init --help
+  989  pwd
+  990  history 
+  991  mkdir test_call_from_lib && cd _
+  992  mkdir test_call_from_lib 
+  993  cd test_call_from_lib/
+  994  cargo init --lib  .
+  995  tree
+  996  pwd
+  997  cd src/
+  998  ls
+  999  cargo build
+ 1000  cargo add criterion
+ 1001  cargo build
+ 1002  cargo add lib
+ 1003  cargo build
+ 1004  vi benches/my_benchmark.rs
+ 1005  mkdir benches
+ 1006  vi benches/my_benchmark.rs
+ 1007  cargo build
+ 1008  cd ..
+ 1009  rm -rf rust_criterion_bench_comparing_fn/
+ 1010  mkdir  rust_criterion_bench_comparing_fn/
+ 1011  cd rust_criterion_bench_comparing_fn/
+ 1012  history 
+ 1013  cargo init --lib .
+ 1014  cargo add --dev criterion
+ 1015  touch README.md
+ 1016  touch FROM_HERE.md
+ 1017  touch COMMAND_PATH_Of_PROJECT.md
+ 1018  history |grep cargo add
+ 1019  history |grep cargo 
+ 1020  ls
+ 1021  code --list-extensions --show-versions
+ 1022  ubuntu 
+ 1023  ubuntu-distro-info 
+ 1024  ubuntu-build
+ 1025  uname
+ 1026  uname -a
+ 1027  code --version
+ 1028  code --list-extensions --show-versions
+ 1029  rustup --versiom
+ 1030  rustup -- --versiom
+ 1031  rustup -- --version
+ 1032  rustup -- help
+ 1033  rustup --help
+ 1034  rustup -V
+ 1035  rustup update
+ 1036  rustup -V
+ 1037  cp ../rust-my-first-steps/MARKDOWN_COMMAND_OVERVIEW.md .
+ 1038  ls src/lib.rs && rm $_
+ 1039  echo src/lib.rs << END 
+ 1040  #[inline]
+ 1041  fn fibonacci(n: u64) -> u64 {
+ 1042      match n {
+ 1043          0 => 1,
+ 1044          1 => 1,
+ 1045          n => fibonacci(n-1) + fibonacci(n-2),
+ 1046      }
+ 1047  }
+ 1048  END
+ 1049  cat src/
+ 1050  ls -l src
+ 1051  echo src/lib.rs << END 
+ 1052  #[inline]
+ 1053  fn fibonacci(n: u64) -> u64 {
+ 1054      match n {
+ 1055          0 => 1,
+ 1056          1 => 1,
+ 1057          n => fibonacci(n-1) + fibonacci(n-2),
+ 1058      }
+ 1059  }
+ 1060  END
+ 1061  ls -l src
+ 1062  tee -a  ~/src/lib.rs << END 
+ 1063  #[inline]
+ 1064  fn fibonacci(n: u64) -> u64 {
+ 1065      match n {
+ 1066          0 => 1,
+ 1067          1 => 1,
+ 1068          n => fibonacci(n-1) + fibonacci(n-2),
+ 1069      }
+ 1070  }
+ 1071  END
+ 1072  ls -l src
+ 1073  ls -l
+ 1074  tee -a  ~/lib.rs << END 
+ 1075  #[inline]
+ 1076  fn fibonacci(n: u64) -> u64 {
+ 1077      match n {
+ 1078          0 => 1,
+ 1079          1 => 1,
+ 1080          n => fibonacci(n-1) + fibonacci(n-2),
+ 1081      }
+ 1082  }
+ 1083  END
+ 1084  ls -l
+ 1085  ls -l src/
+ 1086  tee -a  ./src/lib.rs << END 
+ 1087  #[inline]
+ 1088  fn fibonacci(n: u64) -> u64 {
+ 1089      match n {
+ 1090          0 => 1,
+ 1091          1 => 1,
+ 1092          n => fibonacci(n-1) + fibonacci(n-2),
+ 1093      }
+ 1094  }
+ 1095  END
+ 1096  tee -a  ./Cargo.toml <<  END 
+ 1097  TEST
+ 1098  END
+ 1099  tee -a  ./Cargo.toml <<  END 
+ 1100  [[bench]]
+ 1101  name = "my_benchmark"
+ 1102  harness = false
+ 1103  END
+ 1104  tee -a  ./Cargo.toml <<  END 
+ 1105  [[bench]]
+ 1106  name = "my_benchmark"
+ 1107  harness = false
+ 1108  END
+ 1109  cat $PROJECT/benches/my_benchmark.rs
+ 1110  cat $PROJECT
+ 1111  tee -a  ./benches/my_benchmark.rs << END
+ 1112  TEST bench
+ 1113  END
+ 1114  tee -a  ./benches/my_benchmark.rs << END
+ 1115  TEST bench
+ 1116  END
+ 1117  pwd
+ 1118  ls -l
+ 1119  mkdir ./benches
+ 1120  tee -a  ./benches/my_benchmark.rs << END
+ 1121  TEST bench
+ 1122  END
+ 1123  rm -rf ./benches/my_benchmark.rs
+ 1124  tee -a  ./benches/my_benchmark.rs << END
+ 1125  use criterion::{black_box, criterion_group, criterion_main, Criterion};
+ 1126  use mycrate::fibonacci;
+ 1127  pub fn criterion_benchmark(c: &mut Criterion) {
+ 1128      c.bench_function("fib 20", |b| b.iter(|| fibonacci(black_box(20))));
+ 1129  }
+ 1130  criterion_group!(benches, criterion_benchmark);
+ 1131  criterion_main!(benches);
+ 1132  END
+ 1133  cargo build
+ 1134  cargo bench
+ 1135  cargo bench
+ 1136  cargo build --example main_result_one
+ 1137  ls -l examples/main_result_one.rs
+ 1138  mv src/examples/ ..
+ 1139  cd ..
+ 1140  ls -ltr
+ 1141  mv examples/ rust_criterion_bench_comparing_fn/
+ 1142  cd rust_criterion_bench_comparing_fn/
+ 1143  cargo build --example main_result_one
+ 1144  cargo run --example main_result_one
+ 1145  cd examples/
+ 1146  cp main_result_one.rs main_result_second.rs 
+ 1147  cargo run --example main_result_second
+ 1148  cp main_result_second.rs main_result_third.rs
+ 1149  cargo run --example main_result_third
+ 1150  cp main_result_third.rs main_result_four.rs
+ 1151  cargo run --example main_result_four
+ 1152  ped
+ 1153  pwd
+ 1154  mkdir rust_Criterion_bench_comparing_fn
+ 1155  mv rust_Criterion_bench_comparing_fn rust_criterion_bench_comparing_fn
+ 1156  cd rust_criterion_bench_comparing_fn/
+ 1157  rust init .
+ 1158  cargo init .
+ 1159  touch README.md
+ 1160  touch FROM_HERE.md
+ 1161  vi FROM_HERE.md 
+ 1162  firefox https://bheisler.github.io/criterion.rs/book/getting_started.html#getting-started &
+ 1163  export DISSPLAY=:0
+ 1164  firefox https://bheisler.github.io/criterion.rs/book/getting_started.html#getting-started &
+ 1165  echo $DISPLAY
+ 1166  export DISPLAY=:0
+ 1167  echo $DISPLAY
+ 1168  firefox https://bheisler.github.io/criterion.rs/book/getting_started.html#getting-started &
+ 1169  history 
+ 1170  WEB_SITE_LINK="https://bheisler.github.io/criterion.rs/book/getting_started.html#getting-started"
+ 1171  echo $WEB_SITE_LINK 
+ 1172  firefox $WEB_SITE_LINK &
+ 1173  history 
+ 1174  history |grep cargo
+ 1175  history |grep cargo add
+ 1176  history 
+ 1177  cargo build --example main_result_one
+ 1178  cargo clean
+ 1179  cargo build --example main_result_one
+ 1180  cargo build --example main_result_third
+ 1181  cargo run --example main_result_third
+ 1182  history |grep cargo
+ 1183  cargo run --example main_result_third
+ 1184  clear
+ 1185  touch examples/simple_math.rs
+ 1186  cargo run --example simple_math
+ 1187  cd ..
+ 1188  mkdir rust_simple_math
+ 1189  cd $_
+ 1190  touch COMMAND_PATH_Of_PROJECT.md
+ 1191  history 
+ 1192  pwd
+ 1193  pwd # just for control
+ 1194  cargo init --lib .  # with library folder
+ 1195  ls
+ 1196  rm -rf Cargo.toml src/
+ 1197  ls -la
+ 1198  rm -rf Cargo.toml 
+ 1199  rm -rf .gitignore 
+ 1200  cargo init --bin --lib .  # with bim and library folder
+ 1201  cargo init --bin  .  # with bin  folder
+ 1202  cargo add lib
+ 1203  cargo add --path lib
+ 1204  mkdir src/lib.rs
+ 1205  mkdir examples
+ 1206  cargo run --example simple_math_add
+ 1207  cargo rename rust_simple
+ 1208  cargo --list
+ 1209  cd ..
+ 1210  mv rust_simple_math/ rust_simple
+ 1211  ls -la
+ 1212  rm -rf .git
+ 1213  ls -la
+ 1214  rm -rf target/
+ 1215  ls -l src/
+ 1216  ls -l examples/
+ 1217  cargo init .
+ 1218  cargo test
+ 1219  cargo test first_simple_easy_test
+ 1220  cargo clean
+ 1221  cargo test first_simple_easy_test
+ 1222  cargo test 
+ 1223  clean
+ 1224  cargo clean
+ 1225  cargo build
+ 1226  cargo test
+ 1227  cargo test --example
+ 1228  cargo test --examples
+ 1229  cargo build  --examples
+ 1230  cargo run  --examples
+ 1231  cargo run  --example
+ 1232  cargo run  --example simple_math_addition
+ 1233  echo $(project)
+ 1234  echo $project
+ 1235  echo $PROJECT
+ 1236  set
+ 1237  set |grep RUST
+ 1238  set |grep rust
+ 1239  echo $(PWD)
+ 1240  echo ${PWD}
+ 1241  ls -l ${PWD}/examples
+ 1242  mkdir  ${PWD}/examples
+ 1243  cd $_
+ 1244  history 
+ 1245  argo run  --example simple_math_addition
+ 1246  cargo run  --example simple_math_addition
+ 1247  cargo run  --example simple_math_subtraction
+ 1248  cargo run  --example simple_math_subtraction.rs 
+ 1249  cargo run  --example simple_math_subtraction
+ 1250  cargo test  --example simple_math_subtraction
+ 1251  cargo test  --example simple_math_addition
+ 1252  cargo add criterion
+ 1253  cd ..
+ 1254  mkdir $PROJECT/benches
+ 1255  mkdir benches
+ 1256  touch benches/my_benchmark.rs
+ 1257  cd
+ 1258  cd  ~/rust_simple
+ 1259  pwd
+ 1260  cargo add-dev criterion
+ 1261  cargo add --dev criterion
+ 1262  set
+ 1263  cargo build
+ 1264  cd src
+ 1265  cd ..
+ 1266  mkdir lib
+ 1267  rmdir lib
+ 1268  cd src/
+ 1269  touch lib.rs
+ 1270  touch  ~/rust_simple/lib.rs
+ 1271  touch  ~/rust_simple/src/lib.rs
+ 1272  tee -a  ~/rust_simple/src/lib.rs << END
+ 1273  //for test criterion
+ 1274  #[inline]
+ 1275  fn fibonacci(n: u64) -> u64 {
+ 1276      match n {
+ 1277          0 => 1,
+ 1278          1 => 1,
+ 1279          n => fibonacci(n-1) + fibonacci(n-2),
+ 1280      }
+ 1281  }
+ 1282  END 
+ 1283  tee -a  ~/rust_simple/src/lib.rs << END
+ 1284  #[inline]
+ 1285  fn fibonacci(n: u64) -> u64 {
+ 1286      match n {
+ 1287          0 => 1,
+ 1288          1 => 1,
+ 1289          n => fibonacci(n-1) + fibonacci(n-2),
+ 1290      }
+ 1291  }
+ 1292  END
+ 1293  tee -a  ~/rust_simple/src/lib.rs << END
+ 1294  # comment
+ 1295  #[inline]
+ 1296  fn fibonacci(n: u64) -> u64 {
+ 1297      match n {
+ 1298          0 => 1,
+ 1299          1 => 1,
+ 1300          n => fibonacci(n-1) + fibonacci(n-2),
+ 1301      }
+ 1302  }
+ 1303  END 
+ 1304  END
+ 1305  tee -a  ~/rust_simple/src/lib.rs << END
+ 1306  # need for testing criterion
+ 1307  #[inline]
+ 1308  fn fibonacci(n: u64) -> u64 {
+ 1309      match n {
+ 1310          0 => 1,
+ 1311          1 => 1,
+ 1312          n => fibonacci(n-1) + fibonacci(n-2),
+ 1313      }
+ 1314  }
+ 1315  END
+ 1316  tee -a  ~/rust_simple/src/lib.rs << END
+ 1317  //need for testing criterion
+ 1318  #[inline]
+ 1319  fn fibonacci(n: u64) -> u64 {
+ 1320      match n {
+ 1321          0 => 1,
+ 1322          1 => 1,
+ 1323          n => fibonacci(n-1) + fibonacci(n-2),
+ 1324      }
+ 1325  }
+ 1326  END
+ 1327  tee -a  ~/rust_simple/benches/test_criterion.rs << END
+ 1328  use criterion::{black_box, criterion_group, criterion_main, Criterion};
+ 1329  use rust_simple::fibonacci;
+ 1330  pub fn criterion_benchmark(c: &mut Criterion) {
+ 1331      c.bench_function("fib 20", |b| b.iter(|| fibonacci(black_box(20))));
+ 1332  }
+ 1333  criterion_group!(benches, criterion_benchmark);
+ 1334  criterion_main!(benches);
+ 1335  END
+ 1336  cargo test
+ 1337  cargo bench
+ 1338  cargo test  --example simple_math_addition
+ 1339  cargo bench
+ 1340  cargo build
+ 1341  cargo test
+ 1342  cargo bench
+ 1343  cd ..
+ 1344  mv examples/ src/
+ 1345  cargo build
+ 1346  cargo run
+ 1347  rustc split.rs && ./split
+ 1348  cd src/
+ 1349  rustc split.rs && ./split
+ 1350  rustc clean && rustc split.rs && ./split
+ 1351  rm split  && rustc split.rs && ./split
+ 1352  cd my_mod/
+ 1353  rustc my_mod.rs && ./my_mod
+ 1354  cd ..
+ 1355  rm split  && rustc split.rs && ./split
+ 1356  clean
+ 1357  clear
+ 1358  rm split  && rustc split.rs && ./split
+ 1359  cargo run
+ 1360  cd ..
+ 1361  mkdir rust_mod_split_in_files
+ 1362  cd $_
+ 1363  cargo init .
+ 1364  ls -ltr
+ 1365  mkdir rust_import_mod
+ 1366  cd $_
+ 1367  pwd
+ 1368  cargo init .
+ 1369  rustc split.rs && ./split
+ 1370  cd src/
+ 1371  rustc split.rs && ./split
+ 1372  pwd
+ 1373  rustc split.rs && ./split
+ 1374  cd src/
+ 1375  rustc split.rs && ./split
+ 1376  cd ..
+ 1377  mkdir rust_crate_mod_subfolder
+ 1378  cd $_
+ 1379  cargo init . --bin
+ 1380  cargo build
+ 1381  cargo run
+ 1382  cargo build
+ 1383  clear
+ 1384  cargo clean
+ 1385  cargo build
+ 1386  cargo clean
+ 1387  cargo build
+ 1388  cargo clean && cargo build
+ 1389  cargo build
+ 1390  git config --global user.name
+ 1391  git config --global user.name "Mathias"
+ 1392  git config  user.name "Mathias"
+ 1393  git commit
+ 1394  cd ..
+ 1395  cargo test
+ 1396  ls -la target/debug/examples/
+ 1397  ls -la target/debug
+ 1398  tree  target/debug
+ 1399  cargo bild
+ 1400  cargo build
+ 1401  ls -ltr
+ 1402  ls -Rltr
+ 1403  cargo build --release
+ 1404  ls -Rltr
+ 1405  ./target/release/rust_package_use_mod 
+ 1406  cargo test
+ 1407  cd ..
+ 1408  mkdir rust_modules_and_project_structure && cd $_
+ 1409  pwd
+ 1410  touch FROM_HERE.md
+ 1411  touch READ_ME.md
+ 1412  touch PROJECT_COMMAND_PATH.md
+ 1413  ls -l
+ 1414  cargo init .
+ 1415  cargo run
+ 1416  code --version
+ 1417  code --version 
+ 1418  ubuntu-
+ 1419  ubuntu-distro-info 
+ 1420  ubuntu-report 
+ 1421  cat /home/trapapa/.cache/ubuntu-report/ubuntu.22.04 
+ 1422  uname -a
+ 1423  uname -h
+ 1424  uname --help
+ 1425  uname -a
+ 1426  uname -o
+ 1427  uname 
+ 1428  uname -a
+ 1429  lsb_release -a
+ 1430  cargo run
+ 1431  firefox https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee &
+ 1432  export display=:0
+ 1433  firefox https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee &
+ 1434  echo  display=:0
+ 1435  export DISPLAY=localhost:10.0 
+ 1436  firefox https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee &
+ 1437  export DISPLAY=:.0 
+ 1438  echo  $DISPLAY
+ 1439  xeyes 
+ 1440  echo $(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+ 1441  export DISPLAY=:0 
+ 1442  echo $DISPLAY
+ 1443  firefox https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee &
+ 1444  sudo apt update
+ 1445  sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
+ 1446  firefox https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee &
+ 1447  history 
+ 1448  clear
+ 1449  cargo run
+ 1450  cargo test
+ 1451  firefox https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee &
+ 1452  export DISPLAY=:0
+ 1453  firefox https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee &
+ 1454  pwd
+ 1455  mkdir rust_package_use_mod && cd $_
+ 1456  pwd
+ 1457  cargo init .
+ 1458  cd ..
+ 1459  rm -rf rust_package_use_mod/ && mkdir rust_package_use_mod && cd $_
+ 1460  ls -la
+ 1461  ls -la .
+ 1462  cd ..
+ 1463  rm -rf rust_package_use_mod/
+ 1464  ls -ltr
+ 1465  df -h .
+ 1466  ls -ltr
+ 1467  mkdir rust_package_use_mod/ && cd $_
+ 1468  ls -la
+ 1469  cd ..
+ 1470  rm -rf rust_package_use_mod/
+ 1471  mkdir rust_package_use_mod/ && cd $_
+ 1472  cargo init .
+ 1473  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && sudo snap refresh
+ 1474  cd /etc/apt/sources.list.d
+ 1475  ls -l
+ 1476  cat zulu.list 
+ 1477  cat zulu-openjdk.list 
+ 1478  cd ..
+ 1479  cp -a sources.list.d save_sources.list.d
+ 1480  sudo cp -a sources.list.d save_sources.list.d
+ 1481  tree sources.list.d
+ 1482  tree save_sources.list.d
+ 1483  cd sources.list.d/
+ 1484  ls
+ 1485  rm zulu.list 
+ 1486  sudo rm zulu.list 
+ 1487  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && sudo snap refresh
+ 1488  grep download.docker.com  *
+ 1489  pwd
+ 1490  rm docker.list 
+ 1491  sudo rm docker.list 
+ 1492  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && sudo snap refresh
+ 1493  touch FROM_HERE.md
+ 1494  touch READ_ME.md
+ 1495  cargo install --force hyperfine
+ 1496  hyperfine "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1497  hyperfine -v
+ 1498  hyperfine -V
+ 1499  cd ..
+ 1500  rmdir profiling-with-perf-and-dhat-on-rust-code-in-linux/
+ 1501  rm -rf ./profiling-with-perf-and-dhat-on-rust-code-in-linux/
+ 1502  mkdir perf-and-dhat-profiling-example 
+ 1503  cd $_
+ 1504  cargo init .
+ 1505  cago add csv
+ 1506  cargo add csv
+ 1507  cargo add dhat
+ 1508  cargo install --force hyperfine
+ 1509  wget -o test.csv https://github.com/justanotherdot/perf-and-dhat-profiling-example/blob/main/test.csv
+ 1510  ls -ltr
+ 1511  cat test.csv
+ 1512  cat test.csv.1 
+ 1513  ls -l test.csv.1 
+ 1514  wget  https://github.com/justanotherdot/perf-and-dhat-profiling-example/blob/main/test.csv >test.csv
+ 1515  ls
+ 1516  hyperfine -V
+ 1517  hyperfine "../perf-and-dhat-profiling-example test.csv"
+ 1518  cargo build --release
+ 1519  hyperfine "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1520  touch FROM_HERE.md
+ 1521  touch READ_ME.md
+ 1522  ln README READ_ME.md
+ 1523  ln  READ_ME.md README
+ 1524  ls -ltr
+ 1525  cargo build --release
+ 1526  rustc --explain E0554
+ 1527  cargo build
+ 1528  cargo build --release
+ 1529  cargo +nightly build --release
+ 1530  rustup add --toolchain nightly-x86_64-unknown-linux-gnu
+ 1531  rustup -- --toolchain nightly-x86_64-unknown-linux-gnu
+ 1532  rustup -- +toolchain nightly-x86_64-unknown-linux-gnu
+ 1533  rustup -- +toolchain --help
+ 1534  rustup toolchain --help
+ 1535  rustup toolchain install  nightly-x86_64-unknown-linux-gnu
+ 1536  rustup default nightly
+ 1537  rustup default 
+ 1538  rustup target list
+ 1539  rustup default 
+ 1540  rustup target x86_64-unknown-linux-gnu
+ 1541  rustup toolchain install  x86_64-unknown-linux-gnu
+ 1542  rustup toolchain install  stable-x86_64-unknown-linux-gnu
+ 1543  rustup default 
+ 1544  rustup target stable-x86_64-unknown-linux-gnu
+ 1545  history 
+ 1546  rustup default stable
+ 1547  rustup default
+ 1548  rustup default nightly
+ 1549  rustup default 
+ 1550  rustup default stable
+ 1551  rustup default 
+ 1552  rustup default nightly
+ 1553  cargo build
+ 1554  rustup show
+ 1555  rustup stable
+ 1556  rustup default stable
+ 1557  rustup default nightly
+ 1558  cargo clean
+ 1559  cargo build
+ 1560  rustup update
+ 1561  rustup default 
+ 1562  clear
+ 1563  cargo build --release
+ 1564  cargo install --force hyperfine
+ 1565  hyperfine "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1566  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1567  <snip, lots of output from the program itself>
+ 1568  sudo apt install linux-intel-iotg-tools-common
+ 1569  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1570  sudo apt install linux-tools-generic
+ 1571  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1572  apt install linux-tools-5.19.0-46-generic
+ 1573  sudo apt install linux-tools-5.19.0-46-generic
+ 1574  sudo apt --fix-broken install
+ 1575  uname -a
+ 1576  history 
+ 1577  sudo apt purge linux-tools-generic
+ 1578  sudo apt --fix-broken install
+ 1579  sudo apt --fix-broken install linux-tools-common
+ 1580  apt remove --purge linux-tools-common
+ 1581  sudo apt remove --purge linux-tools-common
+ 1582  sudo apt install linux-tools
+ 1583  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1584  apt install linux-tools-5.19.0-46-generic linux-cloud-tools-5.19.0-46-generic
+ 1585  sudo apt install linux-tools-5.19.0-46-generic linux-cloud-tools-5.19.0-46-generic
+ 1586  apt --fix-broken install
+ 1587  sudo apt --fix-broken install+
+ 1588  sudo apt --fix-broken install
+ 1589  apt -i /var/cache/apt/archives/linux-tools-common_5.15.0-76.83_all.deb
+ 1590  apt install /var/cache/apt/archives/linux-tools-common_5.15.0-76.83_all.deb
+ 1591  sudo apt install /var/cache/apt/archives/linux-tools-common_5.15.0-76.83_all.deb
+ 1592  apt install linux-tools-common
+ 1593  sudo apt install linux-tools-common
+ 1594  apt clean
+ 1595  sudo apt clean
+ 1596  sudo apt update
+ 1597  sudo apt upgrade
+ 1598  apt --fix-broken install
+ 1599  sudo apt --fix-broken install
+ 1600  ls -la /var/cache/apt
+ 1601  ls -lah /var/cache/apt
+ 1602  sudo apt-get auto-clean
+ 1603  sudo apt-get clean
+ 1604  echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
+ 1605  pwd
+ 1606  id
+ 1607  mkdir profiling-with-perf-and-dhat-on-rust-code-in-linux
+ 1608  cd $_
+ 1609  cargo init .
+ 1610  cd tm
+ 1611  cd tmp
+ 1612  pwd
+ 1613  cd /tmp/
+ 1614  ls -ltr
+ 1615  git clone https://github.com/justanotherdot/perf-and-dhat-profiling-example.git
+ 1616  cd perf-and-dhat-profiling-example/
+ 1617  ls
+ 1618  cat test.csv 
+ 1619  mv test.csv  ~/perf-and-dhat-profiling-example
+ 1620  exit
+ 1621  gnome-session-properties 
+ 1622  export DISPLAY=:1
+ 1623  gnome-session-properties 
+ 1624  sudo gnome-session-properties 
+ 1625  which psensor 
+ 1626  perf
+ 1627  uname
+ 1628  uname -a
+ 1629  apt-cache show linux-tools-$(uname -r)
+ 1630  history |grep snap
+ 1631  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y 
+ 1632  apt --fix-broken install
+ 1633  sudo apt --fix-broken install
+ 1634  apt clean
+ 1635  sudo apt clean
+ 1636  sudo apt auto-clean
+ 1637  df -h .
+ 1638  df -h 
+ 1639  ls -l /var/lib/lo*
+ 1640  sudo dpkg --configure -a
+ 1641  sudo apt update
+ 1642  sudo apt clean
+ 1643  sudo apt update --fix-missing
+ 1644  sudo apt install -f
+ 1645  apt remove --purge linux-tools-5.15.0-76
+ 1646  sudo apt remove --purge linux-tools-5.15.0-76
+ 1647  sudo apt remove --purge linux-tools-5.15.0-76-generic
+ 1648  sudo apt remove --purge linux-tools-generic
+ 1649  sudo apt install linux-tools-common
+ 1650  sudo apt purge --remove linux-intel-iotg-tools-common
+ 1651  sudo apt purge --remove linux-intel-iotg-tools-common linux-tools-common
+ 1652  sudo apt purge --remove linux-intel-iotg-tools-common linux-tools-common linux-tools-5.15.0-76
+ 1653  sudo apt purge --remove linux-intel-iotg-tools-common linux-tools-common linux-tools-5.15.0-76 linux-tools-5.15.0-76-generic 
+ 1654  sudo apt purge --remove linux-intel-iotg-tools-common linux-tools-common linux-tools-5.15.0-76 linux-tools-5.15.0-76-generic  linux-tools-generic
+ 1655  history 
+ 1656  sudo apt clean
+ 1657  sudo apt update 
+ 1658  hyperfine "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1659  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1660  <snip, lots of output from the program itself>
+ 1661  echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
+ 1662  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1663  <snip, lots of output from the program itself>
+ 1664  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1665  ls -ltr /home/trapapa/Bilder/Bildschirmfotos
+ 1666  ls -ltr /home/trapapa/Bilder/Bildschirmfotos/Bildschirmfoto vom 2023-07-18 10-18-28.png
+ 1667  ls -ltr "/home/trapapa/Bilder/Bildschirmfotos/Bildschirmfoto vom 2023-07-18 10-18-28.png"
+ 1668  cp "/home/trapapa/Bilder/Bildschirmfotos/Bildschirmfoto vom 2023-07-18 10-18-28.png" perf-output.png
+ 1669  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1670  perf record -a -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1671  perf record  -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1672  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf --target/release/perf-and-dhat-profiling-example test.csv
+ 1673  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1674  perf list always
+ 1675  perf list 
+ 1676  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1677  perf record -e L1-dcache-loads,LLC-load --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1678  sudo perf record -e L1-dcache-loads,LLC-load --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1679  perf report
+ 1680  sudo perf report
+ 1681  chmod 0777 perf.data
+ 1682  sudo chmod 0777 perf.data
+ 1683  perf report
+ 1684  perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1685  cargo build
+ 1686  perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1687  sudo perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1688  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1689  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv -a
+ 1690  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv --all-cpus
+ 1691  papi-tools
+ 1692  papi
+ 1693  sudo apt -y install papi-tools
+ 1694  papi-tools
+ 1695  papi
+ 1696  sudo perf list cache
+ 1697  papi_native_avail
+ 1698  papi_native_avail |grep LLC
+ 1699  perf record -e L1-dcache-loads,LLC-LOAD-MISSES --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1700  perf list |grep -i LLC
+ 1701  perf list |grep -i LLC_load
+ 1702  perf list |grep -i LLC-Load
+ 1703  perf list |grep -i LLC-Loads
+ 1704  perf list |grep -i LLC-Loads-
+ 1705  perf list |grep -i LLC-Loads
+ 1706  perf record -e L1-dcache-loads,LLC-Loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1707  perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1708  sudo perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1709  perf list
+ 1710  perf list > /tmp/t.txt
+ 1711  cat /tmp/t.txt 
+ 1712  cat /tmp/t.txt |grep missed
+ 1713  sudo apt update --fix-missing
+ 1714  sudo apt install 
+ 1715  sudo apt install -f
+ 1716  sudo apt clean
+ 1717  perf
+ 1718  sudo apt install linux-tools-common
+ 1719  perf
+ 1720  uname -r
+ 1721  sudo apt install linux-tools-5.19.0-46-generic linux-cloud-tools-5.19.0-46-generic
+ 1722  perf
+ 1723  history 
+ 1724  apt-cache show linux-tools-$(uname -r)
+ 1725  apt-cache show linux-tools-$(uname -r)-generic
+ 1726  echo linux-tools-$(uname -r)-generic
+ 1727  echo linux-tools-$(uname -r)
+ 1728  apt-cache show linux-tools-$(uname -r)
+ 1729  apt-cache show linux-cloud-tools~$(uname -r)
+ 1730  apt-cache show linux-cloud-tools-$(uname -r)
+ 1731  echo linux-tools-$(uname -r)
+ 1732  echo apt-cache show linux-cloud-tools-$(uname -r)
+ 1733  echo linux-cloud-tools-$(uname -r)
+ 1734  history 
+ 1735  echo linux-tools-$(uname -r)
+ 1736  sudo apt-get install clipit 
+ 1737  sudo apt-get remove --purge  clipit 
+ 1738  perf
+ 1739  perf -e list
+ 1740  perf list
+ 1741  perf -e system_time
+ 1742  perf list -e system_time
+ 1743  perf list hw
+ 1744  perf list hw -e
+ 1745  perf -e list hw 
+ 1746  perf  list -e 
+ 1747  perf  list hw
+ 1748  perf  list -d hw
+ 1749  perf  -e
+ 1750  perf list -e
+ 1751  perf list -d
+ 1752  perf list -d system_time
+ 1753  cat /proc/sys/kernel/perf_event_paranoid
+ 1754  echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
+ 1755  cat /proc/sys/kernel/perf_event_paranoid
+ 1756  cargo clean
+ 1757  cargo build --release
+ 1758  export RUSTFLAGS="-C target-cpu=native"
+ 1759  ecgo $RUSTFLAGS
+ 1760  echo $RUSTFLAGS
+ 1761  hyperfine "target/debug/perf-and-dhat-profiling-example test.csv"
+ 1762  hyperfine "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1763  hyperfine --show-output "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1764  history 
+ 1765  cargo build
+ 1766  hyperfine --show-output "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1767  echo $RUSTFLAGS
+ 1768  cargo build release
+ 1769  cargo build --release
+ 1770  hyperfine --show-output "target/debug/perf-and-dhat-profiling-example
+ 1771   test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1772  hyperfine --show-output "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1773  export RUSTFLAGS="-C target-cpu=native" && echo $RUSTFLAGS
+ 1774  hyperfine --show-output "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1775  export RUSTFLAGS="" && echo $RUSTFLAGS
+ 1776  hyperfine --show-output "target/debug/perf-and-dhat-profiling-example test.csv" "target/release/perf-and-dhat-profiling-example test.csv"
+ 1777  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv <snip, lots of output from the program itself>
+ 1778  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1779  perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1780  perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1781  perf --version
+ 1782  perf version
+ 1783  perf --help
+ 1784  perf version
+ 1785  perf help version
+ 1786  perf -version
+ 1787  perf-version
+ 1788  perf help version
+ 1789  perf version
+ 1790  perf help version
+ 1791  perf version --build-options
+ 1792  perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1793  sudo perf record -e L1-dcache-loads,LLC-loads --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1794  perf stat -ad -r 100 target/release/perf-and-dhat-profiling-example test.csv
+ 1795  sudo perf record -e L1-dcache-loads,LLC-load-misses --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1796  sudo perf record -e L1-dcache-loads,LLC-load --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1797  sudo perf report
+ 1798  sudo perf record -e L1-dcache-loads,LLC-load --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1799  perf report
+ 1800  sudo perf report
+ 1801  rm perf.data
+ 1802  rm perf.data.old 
+ 1803  cargo install --force inferno
+ 1804  perf script | inferno-collapse-perf > stacks.folded
+ 1805  sudo perf record -e L1-dcache-loads,LLC-load --call-graph dwarf -- target/release/perf-and-dhat-profiling-example test.csv
+ 1806  perf script | inferno-collapse-perf > stacks.folded
+ 1807  sudo perf script | inferno-collapse-perf > stacks.folded
+ 1808  cat stacks.folded | inferno-flamegraph > profile.svg
+ 1809  cat stacks.folded 
+ 1810  uname -r
+ 1811  cat /proc/version
+ 1812  history 
+ 1813  pwd
+ 1814  mkdir rust_compare_array_vector
+ 1815  cd $_
+ 1816  cargo init --lib
+ 1817  cargo run --example hello
+ 1818  cargo run --example return_code
+ 1819  history 
+ 1820  cargo run --example return_code
+ 1821  cargo run --example return_code_user_dev
+ 1822  cargo run --example return_code_user_def
+ 1823  cargo run hello
+ 1824  cargo run --example hello
+ 1825  cat .
+ 1826  cargo run --example hello
+ 1827  cargo run --example arrays
+ 1828  cargo fix --example "closures_main
+ 1829  "
+ 1830  cargo fix --example "closures_main"
+ 1831  htop
+ 1832  cargo run --example {content,metadata,names,read,text} -- <files/{choose a pdf}>
+ 1833  cargo run --example {content,metadata,names,read,text} -- pdf/examples/read.rs 
+ 1834  cargo clean
+ 1835  cargo build
+ 1836  touch README.md
+ 1837  touch FROM_HERE.md
+ 1838  cargo add printpdf
+ 1839  cargo build
+ 1840  cargo build simple_page
+ 1841  cargo build simple_page.rs
+ 1842  cargo build simple_page
+ 1843  cargo build -- simple_page
+ 1844  cargo build -- main.rs
+ 1845  cargo build -- main
+ 1846  cargo build  main
+ 1847  cargo run  main
+ 1848  cargo clean  main
+ 1849  cargo clean  
+ 1850  pwd
+ 1851  mkdir test_rust_create_pdf & $_
+ 1852  mkdir test_rust_create_pdf & cd $_
+ 1853  cd test_rust_create_pdf/
+ 1854  cd ..
+ 1855  ls -ltr
+ 1856  rm -rf test_rust_create_pdf/
+ 1857  mkdir rust_create_pdf_first & cd $_
+ 1858  ls -ltr
+ 1859  df -h .
+ 1860  cd rust_create_pdf_first/
+ 1861  cargo init .
+ 1862  ls -la
+ 1863  pwd
+ 1864  cargo add pdf
+ 1865  cargo build
+ 1866  cargo run
+ 1867  vi src/main.rs 
+ 1868  cargo run
+ 1869  htop
+ 1870  cd /tmp
+ 1871  wget git.io/trans
+ 1872  chmod +x trans 
+ 1873  sudo mv trans /usr/bin/
+ 1874  trans
+ 1875  trans :ta "what is going on your life?"
+ 1876  trans :de "what is going on your life?"
+ 1877  trans :de file:///home/magi/gtrans.txt
+ 1878  trans :de file:///home/trapapa/Downloads/EL-GB2020.pdf 
+ 1879  sudo apt-get install pdftk
+ 1880  pdftk /home/trapapa/Downloads/EL-GB2020.pdf  /tmp/test.pdf
+ 1881  sudo apt-get install qpdf
+ 1882  history 
+ 1883  history |apt install
+ 1884  history |grep install
+ 1885  sudo apt-get deinstall --remove pdftk
+ 1886  sudo apt-get purge --remove pdftk
+ 1887  sudo apt-get purge --remove qpdf
+ 1888  sudo apt-get install ghostscript 
+ 1889  sudo apt autoremove
+ 1890  gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted.pdf -c .setpdfwrite -f encrypted.pdf
+ 1891  gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=/tmp/unencrypted.pdf -c .setpdfwrite -f /home/trapapa/Downloads/EL-GB2020.pdf 
+ 1892  gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=/tmp/unencrypted.pdf  -f /home/trapapa/Downloads/EL-GB2020.pdf 
+ 1893  ls u*
+ 1894  ls -la u*
+ 1895  ls -laH u*
+ 1896  ls -lah u*
+ 1897  history |grep trans
+ 1898  trans :de file:///tmp/unencrypted.pdf 
+ 1899  cd
+ 1900  git clone https://github.com/soimort/translate-shell && cd translate-shell
+ 1901  pwd
+ 1902  make
+ 1903  sudo make install
+ 1904  trans -help
+ 1905  trans saúdos
+ 1906  trans :de /tmp/unencrypted.pdf 
+ 1907  trans  /tmp/unencrypted.pdf 
+ 1908  trans  file:///tmp/unencrypted.pdf 
+ 1909  libreoffice --infilter="writer_pdf_import" --convert-to docx input.pdf
+ 1910  libreoffice --infilter="writer_pdf_import" --convert-to docx /tmp/unencrypted.pdf
+ 1911  export DISPLAY=:1
+ 1912  libreoffice --infilter="writer_pdf_import" --convert-to docx /tmp/unencrypted.pdf
+ 1913  sudo libreoffice --infilter="writer_pdf_import" --convert-to docx /tmp/unencrypted.pdf 
+ 1914  export DISPLAY=:1
+ 1915  sudo libreoffice --infilter="writer_pdf_import" --convert-to docx /tmp/unencrypted.pdf 
+ 1916  sudo libreoffice --infilter="writer_pdf_import" --convert-to docx /tmp/unencrypted.pdf --display :1
+ 1917  sudo libreoffice --infilter="writer_pdf_import" --convert-to docx /tmp/unencrypted.pdf --display 
+ 1918  libreoffice --infilter="writer_pdf_import" --convert-to docx /tmp/unencrypted.pdf --display 
+ 1919  xhost +x
+ 1920  export DISPLAY=:1
+ 1921  xhost +x
+ 1922  libreoffice --impress
+ 1923  sudo apt-get install default-jre libreoffice-java-common
+ 1924  libreoffice --impress
+ 1925  echo $DISPLAY
+ 1926  libreoffice --impress -display
+ 1927  sudo libreoffice --impress -display
+ 1928  export DISPLAY=0:0
+ 1929  libreoffice --impress -display
+ 1930  xauth list
+ 1931  xeyes 
+ 1932  cd
+ 1933  cd play_ground/
+ 1934  ls -ltr
+ 1935  htop
+ 1936  ls -ltr /tmp
+ 1937  ls -ltr
+ 1938  htop
+ 1939  history 
+ 1940  mkdir play_ground_two
+ 1941  cp play_ground/unencrypted.pdf play_ground_two/
+ 1942  cd play_ground_two/
+ 1943  ls -l
+ 1944  mkir out
+ 1945  mkdir out
+ 1946  pdftoppm unencrypted.pdf unencrypted.pdf -png
+ 1947  gimp
+ 1948  sudo snap install gimp 
+ 1949  ls
+ 1950  gimp unencrypted.pdf-164.png
+ 1951  history 
+ 1952  tesseract
+ 1953  tesseract -v
+ 1954  pdftppm -v
+ 1955  pdftoppm -v
+ 1956  ls -l
+ 1957  tesseract -l deu unencrypted.pdf-274.png pdf
+ 1958  ls -ltr
+ 1959  pdfsam-console
+ 1960  sudo apt-get install pdfsam 
+ 1961  pdfsam
+ 1962  export DISPLAY=:0 pdfsam
+ 1963  history 
+ 1964  id
+ 1965  history 
+ 1966  history  >/tmp/pdf_history.txt

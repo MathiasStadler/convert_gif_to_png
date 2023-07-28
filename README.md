@@ -30,10 +30,16 @@ EOT
 
 ```
 
-- run script in terminal
+- make script executable in terminal
 
 ```bash
+chmod +x ./src/convert_gif_2_png.sh 
+```
 
+- run script with samples
 
-
+```bash
+./src/convert_gif_2_png.sh ./samples/sample_page_one.jpg 
+./src/convert_gif_2_png.sh ./samples/sample_page_two.jpg 
+./src/convert_gif_2_png.sh ./samples/sample_page_third.jpg
 ```

@@ -1,4 +1,4 @@
-# png,gif via ocr to txt files bash
+# convert gif to png
 
 - create script
 

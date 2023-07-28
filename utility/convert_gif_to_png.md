@@ -30,11 +30,13 @@ eog 1690380478072.jpg
 
 ## covert in png format
 
+- create script from project folder
+
 ```bash
 convert ~/Downloads/1690268873786.jpg ~/Downloads/1690268873786.png
 
 //or
-cat <<EOT > convert_gif_2_png.sh
+cat <<EOT > src/convert_gif_2_png.sh
 #!/bin/bash
 set -e
 if [[ \$1 == "" ]] #Where "\$1" is the positional argument you want to validate 
